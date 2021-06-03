@@ -1416,6 +1416,7 @@ let autoload = ref true
 
 let args = Arg.align [
 #if OCAML_VERSION >= (4, 08, 0)
+  "-nopervasives", Arg.Set Clflags.nopervasives, " Remove Stdlib from initial environment";
   "-absname", Arg.Set Clflags.absname, " Show absolute filenames in error message";
 #else
   "-absname", Arg.Set Location.absname, " Show absolute filenames in error message";
